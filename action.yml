@@ -14,11 +14,12 @@ runs:
 
         switch ${{ inputs.plugin-manager }}
             case fisher
-                echo "fisher: unimplemented"
+                curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
             case oh-my-fish
-                echo "oh-my-fish: unimplemented"
+                curl -L https://get.oh-my.fish > omf-install
+                chmod u+x omf-install
+                ./omf-install -y --noninteractive
             case plug.fish
-                echo "plug.fish: unimplemented"
+                curl -sSL https://git.io/fish-plug | source && plug install kidonng/fish-plug
         end
-        echo "Work in progress"; and exit 1
       shell: fish {0}
