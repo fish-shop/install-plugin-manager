@@ -37,7 +37,7 @@ The following table lists the supported plugin managers and the corresponding `p
 
 After installing one of the supported plugin managers listed above you may interact directly with it during subsequent steps of your workflow. This means you can install, remove, and manage plugins as desired to satisfy your particular use case.
 
-For example, to install the [Pond](http://github.com/marcransome/pond) plugin using the [Fisher](https://github.com/jorgebucaran/fisher) plugin manager:
+For example, to install the [Pond](http://github.com/marcransome/pond) plugin using [Fisher](https://github.com/jorgebucaran/fisher):
 
 ```yaml
 ...
