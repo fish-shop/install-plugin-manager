@@ -25,13 +25,13 @@ jobs:
 
 ## Supported plugin managers
 
-The following table lists the supported plugin managers and the corresponding `plugin-manager` input name to use in your workflow:
+The following table lists the supported plugin managers and the corresponding `plugin-manager` input value to use in your workflow:
 
-| Plugin manager                                         | Action input name |
-|--------------------------------------------------------|-------------------|
-| [Fisher](https://github.com/jorgebucaran/fisher)       | `fisher`          |
-| [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) | `oh-my-fish`      |
-| [plug.fish](https://github.com/kidonng/plug.fish)      | `plug.fish`       |
+| Plugin manager                                         | `plugin-manager` value |
+|--------------------------------------------------------|------------------------|
+| [Fisher](https://github.com/jorgebucaran/fisher)       | `fisher`               |
+| [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) | `oh-my-fish`           |
+| [plug.fish](https://github.com/kidonng/plug.fish)      | `plug.fish`            |
 
 ## Managing plugins
 
