@@ -17,7 +17,7 @@ jobs:
   install-plugin-manager:
     runs-on: ubuntu-latest
     steps:
-      - name: Install fish shell plugin manager
+      - name: Install Fisher plugin manager
         uses: fish-shop/install-plugin-manager@1.0.0
         with:
           plugin-manager: fisher
