@@ -25,3 +25,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Print ref value
         run: echo ${GITHUB_REF}
+      - name: Print ref from github context
+        run: echo ${{ github.ref }}
