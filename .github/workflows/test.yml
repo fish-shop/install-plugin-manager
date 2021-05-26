@@ -27,14 +27,9 @@ jobs:
         run: echo ${GITHUB_REF}
       - name: Print ref from github context
         run: echo ${{ github.ref }}
-      - name: List files
-        run: |
-          pwd
-          ls -al
-          echo "> $GITHUB_WORKSPACE"
-          cd $GITHUB_WORKSPACE
-          ls -al
+      - name: Install fish shell
+        uses: fish-actions/install-fish@v1.1.0
       - name: Use local my-action
-        uses: ./.
+        uses: .
         with:
           plugin-manager: fisher
