@@ -25,19 +25,25 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install fish shell
         uses: fish-actions/install-fish@v1.1.0
-      - name: Install plugin manager
-        uses: fish-shop/install-plugin-manager@1.0.0
+      - if: github.event_name != 'pull_request'
+        name: Install plugin manager using action from main branch
+        uses: fish-shop/install-plugin-manager@main
         with:
           plugin-manager: ${{ matrix.plugin-manager }}
-      - name: Check plugin manager installed
-        if: matrix.plugin-manager == 'fisher'
+      - if: github.event_name == 'pull_request'
+        name: Install plugin manager using action from pull-request branch
+        uses: ./.
+        with:
+          plugin-manager: ${{ matrix.plugin-manager }}
+      - if: matrix.plugin-manager == 'fisher'
+        name: Check Fisher was installed
         run: type -q fisher
         shell: fish {0}
-      - name: Check plugin manager installed
-        if: matrix.plugin-manager == 'oh-my-fish'
+      - if: matrix.plugin-manager == 'oh-my-fish'
+        name: Check Oh My Fish was installed
         run: type -q omf
         shell: fish {0}
-      - name: Check plugin manager installed
-        if: matrix.plugin-manager == 'plug.fish'
+      - if: matrix.plugin-manager == 'plug.fish'
+        name: Check plug.fish was installed
         run: type -q plug
         shell: fish {0}
