@@ -29,3 +29,5 @@ jobs:
         run: echo ${{ github.ref }}
       - name: Test plugin manager intall from ref
         uses: fish-shop/install-plugin-manager@${{ github.ref }}
+        with:
+          plugin-manager: fisher
