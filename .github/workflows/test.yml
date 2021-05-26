@@ -35,6 +35,6 @@ jobs:
           cd $GITHUB_WORKSPACE
           ls -al
       - name: Use local my-action
-        uses: ./.github/actions/action
+        uses: ./.github/actions/install-plugin-manager
         with:
           plugin-manager: fisher
