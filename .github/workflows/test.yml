@@ -26,7 +26,6 @@ jobs:
       - name: Install fish shell
         uses: fish-actions/install-fish@v1.1.0
       - name: Install plugin manager
-        if: matrix.plugin-manager != 'oh-my-fish'
         uses: fish-shop/install-plugin@1.0.0
         with:
           plugin-manager: ${{ matrix.plugin-manager }}
@@ -39,6 +38,6 @@ jobs:
         run: type -q omf
         shell: fish {0}
       - name: Check plugin manager installed
-        if: matrix.plugin-manager == 'plug'
+        if: matrix.plugin-manager == 'plug.fish'
         run: type -q plug
         shell: fish {0}
