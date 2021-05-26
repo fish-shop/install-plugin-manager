@@ -27,6 +27,8 @@ jobs:
         run: echo ${GITHUB_REF}
       - name: Print ref from github context
         run: echo ${{ github.ref }}
+      - name: List files
+        run: ls -al
       - name: Use local my-action
         uses: ./action.yml
         with:
