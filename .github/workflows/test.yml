@@ -27,3 +27,5 @@ jobs:
         run: echo ${GITHUB_REF}
       - name: Print ref from github context
         run: echo ${{ github.ref }}
+      - name: Test plugin manager intall from ref
+        uses: fish-shop/install-plugin-manager@${{ github.ref }}
