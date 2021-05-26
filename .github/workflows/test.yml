@@ -35,6 +35,6 @@ jobs:
           cd $GITHUB_WORKSPACE
           ls -al
       - name: Use local my-action
-        uses: ./action.yml
+        uses: ${GITHUB_WORKSPACE}/action.yml
         with:
           plugin-manager: fisher
