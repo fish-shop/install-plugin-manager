@@ -1,0 +1,43 @@
+name: tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types:
+      - published
+jobs:
+  tests:
+    strategy:
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+        plugin-manager:
+          - fisher
+          - oh-my-fish
+          - plug.fish
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install fish shell
+        uses: fish-actions/install-fish@v1.1.0
+      - name: Install plugin manager
+        uses: fish-shop/install-plugin-manager@1.0.0
+        with:
+          plugin-manager: ${{ matrix.plugin-manager }}
+      - name: Check plugin manager installed
+        if: matrix.plugin-manager == 'fisher'
+        run: type -q fisher
+        shell: fish {0}
+      - name: Check plugin manager installed
+        if: matrix.plugin-manager == 'oh-my-fish'
+        run: type -q omf
+        shell: fish {0}
+      - name: Check plugin manager installed
+        if: matrix.plugin-manager == 'plug.fish'
+        run: type -q plug
+        shell: fish {0}
