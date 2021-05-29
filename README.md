@@ -47,15 +47,15 @@ Refer to the official documentation for the specific plugin manager being used f
 
 Use one of the following patterns when specifying the version reference for this action in your workflow (i.e. the `{ref}` value in `uses: fish-shop/install-plugin-manager@{ref}`):
 
-| Form     | Example   | Description                                                            |
+| Pattern  | Example   | Description                                                            |
 |----------|-----------|------------------------------------------------------------------------|
 | `vX`     | `v1`      | the latest `v1.*` release including non-breaking changes and bug fixes |
 | `vX.Y`   | `v1.1`    | the latest `v1.1.*` release including bug fixes                        |
 | `vX.Y.Z` | `v1.1.0`  | the `v1.1.0` release only                                      |                
 
-The recommended form is `vX` (e.g. `v1`). This will ensure that the version of the action used in your workflow includes the latest non-breaking changes and bug fixes, and guarantees compatibility with previous versions of that major release number.
+The recommended pattern is `vX` (e.g. `v1`). This will ensure that the version of the action used in your workflow includes the latest non-breaking changes and bug fixes, and guarantees compatibility with previous versions of that major release number.
 
-Using the `main` branch reference in your workflow is _not_ recommended as this branch may include breaking changes intended for the next major release.
+Using a `main` branch reference in your workflow is _not_ recommended as this branch may include breaking changes intended for the next major release.
 
 ## License
 `fish-shop/install-plugin-manager` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
