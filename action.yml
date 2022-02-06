@@ -11,15 +11,28 @@ runs:
   steps:
     - run: |
         set -gx TERM xterm-256color
-
         switch ${{ inputs.plugin-manager }}
             case fisher
-                curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+                if test (type -q fisher) $status -ne 0
+                    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+                else
+                    echo "Plugin manager already installed: fisher"
+                end
             case oh-my-fish
-                curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > omf-install
-                chmod u+x omf-install
-                ./omf-install -y --noninteractive
+                if test (type -q omf) $status -ne 0
+                    curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > omf-install
+                    chmod u+x omf-install
+                    ./omf-install -y --noninteractive
+                else
+                    echo "Plugin manager already installed: oh-my-fish"
+                end
             case plug.fish
-                curl -sSL https://git.io/fish-plug | source && plug install kidonng/fish-plug
+                if test (type -q plug) $status -ne 0
+                    curl -sSL https://git.io/fish-plug | source && plug install kidonng/fish-plug
+                else
+                    echo "Plugin manager already installed: plug.fish"
+                end
+            case '*'
+                echo "Unrecognised plugin manager: '${{ inputs.plugin-manager }}'" >&2; and exit 1
         end
       shell: fish {0}
