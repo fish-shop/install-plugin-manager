@@ -6,6 +6,7 @@ branding:
 inputs:
   plugin-manager:
     description: 'The name of the fish shell plugin manager to install'
+    required: true
 runs:
   using: "composite"
   steps:
