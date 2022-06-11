@@ -1,6 +1,6 @@
 # fish-shop/install-plugin-manager
 
-[![Tests](https://img.shields.io/github/workflow/status/fish-shop/install-plugin-manager/tests?color=brightgreen&label=tests)](https://github.com/fish-shop/install-plugin-manager/actions) [![Issues](https://img.shields.io/github/issues/fish-shop/install-plugin-manager)](https://github.com/fish-shop/install-plugin-manager/issues) [![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen.svg)](https://github.com/fish-shop/install-plugin-manager/network/dependencies) [![License](https://img.shields.io/badge/license-MIT-blue)](http://opensource.org/licenses/mit-license.php) [![fish](https://img.shields.io/badge/fish-3.2.2-blue)](https://fishshell.com)
+[![Tests](https://img.shields.io/github/workflow/status/fish-shop/install-plugin-manager/tests?color=brightgreen&label=tests)](https://github.com/fish-shop/install-plugin-manager/actions) [![Issues](https://img.shields.io/github/issues/fish-shop/install-plugin-manager)](https://github.com/fish-shop/install-plugin-manager/issues) [![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen.svg)](https://github.com/fish-shop/install-plugin-manager/network/dependencies) [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/mit-license.php) [![fish](https://img.shields.io/badge/fish-3.2.2-blue)](https://fishshell.com)
 
 A GitHub action for installing a [fish shell](https://fishshell.com) plugin manager.
 
@@ -66,7 +66,7 @@ A number of related composite actions are also available from the [fish-shop](ht
 * [fish-shop/run-fishtape-tests](https://github.com/fish-shop/run-fishtape-tests) - A GitHub action for running Fishtape tests
 
 ## License
-`fish-shop/install-plugin-manager` is provided under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
+`fish-shop/install-plugin-manager` is provided under the terms of the [MIT License](https://opensource.org/licenses/mit-license.php).
 
 ## Contact
 Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or tweet [@marcransome](http://www.twitter.com/marcransome).
