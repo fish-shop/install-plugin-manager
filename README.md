@@ -1,8 +1,12 @@
+<img alt="fish" src="images/fish-market.png" width="160" align="right">
+
 # fish-shop/install-plugin-manager
 
 [![Tests](https://img.shields.io/github/workflow/status/fish-shop/install-plugin-manager/tests?color=brightgreen&label=tests)](https://github.com/fish-shop/install-plugin-manager/actions) [![Issues](https://img.shields.io/github/issues/fish-shop/install-plugin-manager)](https://github.com/fish-shop/install-plugin-manager/issues) [![Dependabot](https://img.shields.io/badge/dependabot-active-brightgreen.svg)](https://github.com/fish-shop/install-plugin-manager/network/dependencies) [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/mit-license.php) [![fish](https://img.shields.io/badge/fish-3.2.2-blue)](https://fishshell.com)
 
 A GitHub action for installing a [fish shell](https://fishshell.com) plugin manager.
+
+<hr>
 
 ## Prerequisites
 
@@ -64,6 +68,10 @@ A number of related composite actions are also available from the [fish-shop](ht
 * [fish-shop/syntax-check](https://github.com/fish-shop/syntax-check) - A GitHub action for syntax checking fish shell files
 * [fish-shop/install-plugin](https://github.com/fish-shop/install-plugin) - A GitHub action for installing fish shell plugins
 * [fish-shop/run-fishtape-tests](https://github.com/fish-shop/run-fishtape-tests) - A GitHub action for running Fishtape tests
+
+## Acknowledgements
+
+* Fish market icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
 
 ## License
 `fish-shop/install-plugin-manager` is provided under the terms of the [MIT License](https://opensource.org/licenses/mit-license.php).
