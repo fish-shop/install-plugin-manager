@@ -15,7 +15,7 @@ runs:
         switch ${{ inputs.plugin-manager }}
             case fisher
                 if test (type -q fisher) $status -ne 0
-                    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+                    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
                 else
                     echo "Plugin manager already installed: fisher"
                 end
@@ -29,7 +29,7 @@ runs:
                 end
             case plug.fish
                 if test (type -q plug) $status -ne 0
-                    curl -sSL https://git.io/fish-plug | source && plug install kidonng/fish-plug
+                    curl -sL https://raw.githubusercontent.com/kidonng/plug.fish/master/functions/plug.fish | source && plug install kidonng/fish-plug
                 else
                     echo "Plugin manager already installed: plug.fish"
                 end
