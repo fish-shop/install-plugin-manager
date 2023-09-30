@@ -15,7 +15,8 @@ runs:
         switch ${{ inputs.plugin-manager }}
             case fisher
                 if test (type -q fisher) $status -ne 0
-                    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+                    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+                    fisher install jorgebucaran/fisher
                 else
                     echo "Plugin manager already installed: fisher"
                 end
@@ -24,6 +25,7 @@ runs:
                     curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > omf-install
                     chmod u+x omf-install
                     ./omf-install -y --noninteractive
+                    rm -f omf-install
                 else
                     echo "Plugin manager already installed: oh-my-fish"
                 end
