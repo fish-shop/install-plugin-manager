@@ -31,13 +31,11 @@ runs:
                 end
             case plug.fish
                 if test (type -q plug) $status -ne 0
-                    curl -sL https://raw.githubusercontent.com/kidonng/plug.fish/master/functions/plug.fish | source
-                    plug install kidonng/fish-plug
+                    curl -L https://l0c.cc/plug.fish | plugins=https://github.com/kidonng/plug.fish source
                     printf "%s\n" \
-                        "if set --query plug_path" \
-                        "    source \$plug_path/kidonng/plug.fish/functions/plug.fish" \
-                        "    plug init" \
-                        "end" >> ~/.config/fish/config.fish
+                        "set plugins https://github.com/kidonng/plug.fish" \
+                        "source $__fish_user_data_dir/plugins/plug.fish/conf.d/plugin_load.fish" \
+                        >> ~/.config/fish/config.fish
                 else
                     echo "Plugin manager already installed: plug.fish"
                 end
