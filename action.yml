@@ -31,7 +31,7 @@ runs:
                 end
             case plug.fish
                 if test (type -q plug) $status -ne 0
-                    curl -L https://l0c.cc/plug.fish | plugins=https://github.com/kidonng/plug.fish source
+                    curl -L https://l0c.cc/plug.fish | sed 's/--quiet //' | plugins=https://github.com/kidonng/plug.fish source
                     printf "%s\n" \
                         "set plugins https://github.com/kidonng/plug.fish" \
                         "source $__fish_user_data_dir/plugins/plug.fish/conf.d/plugin_load.fish" \
