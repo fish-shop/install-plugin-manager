@@ -30,10 +30,10 @@ runs:
                     echo "Plugin manager already installed: oh-my-fish"
                 end
             case plug.fish
-                if test (type -q plug) $status -ne 0
-                    curl -L https://l0c.cc/plug.fish | sed 's/--quiet //' | plugins=https://github.com/kidonng/plug.fish source
+                if test (type -q plugin_update) $status -ne 0
+                    set --universal plugins https://github.com/kidonng/plug.fish
+                    curl -L https://l0c.cc/plug.fish | source
                     printf "%s\n" \
-                        "set plugins https://github.com/kidonng/plug.fish" \
                         "source $__fish_user_data_dir/plugins/plug.fish/conf.d/plugin_load.fish" \
                         >> ~/.config/fish/config.fish
                 else
