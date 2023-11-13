@@ -43,5 +43,5 @@ jobs:
         shell: fish {0}
       - if: matrix.plugin-manager == 'plug.fish'
         name: Check plug.fish was installed
-        run: type -q plug
+        run: type -q plugin_update; and type -q plugin_uninstall
         shell: fish {0}
