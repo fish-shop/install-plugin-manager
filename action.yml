@@ -32,7 +32,7 @@ runs:
             case plug.fish
                 if test (type -q plug) $status -ne 0
                     curl -sL https://raw.githubusercontent.com/kidonng/plug.fish/v2/functions/plug.fish | source
-                    plug install kidonng/fish.plug
+                    plug install kidonng/plug.fish
                     printf "%s\n" \
                         "if set --query plug_path" \
                         "    source \$plug_path/kidonng/plug.fish/functions/plug.fish" \
