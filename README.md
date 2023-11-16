@@ -31,7 +31,9 @@ The following table lists the supported plugin managers and the corresponding `p
 |--------------------------------------------------------|------------------------|
 | [Fisher](https://github.com/jorgebucaran/fisher)       | `fisher`               |
 | [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) | `oh-my-fish`           |
-| [plug.fish](https://github.com/kidonng/plug.fish)      | `plug.fish`            |
+| [plug.fish](https://github.com/kidonng/plug.fish)      | `plug.fish`[^1]        |
+
+[^1]: `plug.fish` is limited to version [v2](https://github.com/kidonng/plug.fish/tree/v2) due to functional changes made in more recent versions of this plugin manager. Support for this plugin manager may be removed in a future update.
 
 ## Managing plugins
 
