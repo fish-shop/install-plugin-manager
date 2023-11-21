@@ -18,7 +18,7 @@ Add a suitable `uses` step to your GitHub [workflow](https://docs.github.com/en/
 
 ```yaml
 - name: Install Fisher plugin manager
-  uses: fish-shop/install-plugin-manager@v1
+  uses: fish-shop/install-plugin-manager@v2
   with:
     plugin-manager: fisher
 ```
@@ -55,11 +55,11 @@ Use one of the following patterns when specifying the version reference for this
 
 | Pattern  | Example   | Description                                                            |
 |----------|-----------|------------------------------------------------------------------------|
-| `vX`     | `v1`      | the latest `v1.*` release including non-breaking changes and bug fixes |
-| `vX.Y`   | `v1.1`    | the latest `v1.1.*` release including bug fixes                        |
-| `vX.Y.Z` | `v1.1.0`  | the `v1.1.0` release only                                              |
+| `vX`     | `v2`      | the latest `v2.*` release including non-breaking changes and bug fixes |
+| `vX.Y`   | `v2.1`    | the latest `v2.1.*` release including bug fixes                        |
+| `vX.Y.Z` | `v2.1.0`  | the `v2.1.0` release only                                              |
 
-The recommended pattern is `vX` (e.g. `v1`). This will ensure that the version of the action used in your workflow includes the latest non-breaking changes and bug fixes, and guarantees compatibility with previous versions of that major release number.
+The recommended pattern is `vX` (e.g. `v2`). This will ensure that the version of the action used in your workflow includes the latest non-breaking changes and bug fixes, and guarantees compatibility with previous versions of that major release number.
 
 Using a `main` branch reference in your workflow is _not_ recommended as this branch may include breaking changes intended for the next major release.
 
