@@ -31,9 +31,9 @@ The following table lists the supported plugin managers and the corresponding `p
 |--------------------------------------------------------|------------------------|
 | [Fisher](https://github.com/jorgebucaran/fisher)       | `fisher`               |
 | [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish) | `oh-my-fish`           |
-| [plug.fish](https://github.com/kidonng/plug.fish)      | `plug.fish`[^1]        |
+| ~~[plug.fish](https://github.com/kidonng/plug.fish)~~  | ~~`plug.fish`~~[^1]    |
 
-[^1]: `plug.fish` is limited to version [v2](https://github.com/kidonng/plug.fish/tree/v2) due to functional changes made in more recent versions of this plugin manager. Support for this plugin manager may be removed in a future update.
+[^1]: `plug.fish` support was removed in `v2.0.0` due to functional changes made in recent versions of this plugin manager.
 
 ## Managing plugins
 
@@ -57,7 +57,7 @@ Use one of the following patterns when specifying the version reference for this
 |----------|-----------|------------------------------------------------------------------------|
 | `vX`     | `v1`      | the latest `v1.*` release including non-breaking changes and bug fixes |
 | `vX.Y`   | `v1.1`    | the latest `v1.1.*` release including bug fixes                        |
-| `vX.Y.Z` | `v1.1.0`  | the `v1.1.0` release only                                      |                
+| `vX.Y.Z` | `v1.1.0`  | the `v1.1.0` release only                                              |
 
 The recommended pattern is `vX` (e.g. `v1`). This will ensure that the version of the action used in your workflow includes the latest non-breaking changes and bug fixes, and guarantees compatibility with previous versions of that major release number.
 
