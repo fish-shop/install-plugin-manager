@@ -29,18 +29,6 @@ runs:
                 else
                     echo "Plugin manager already installed: oh-my-fish"
                 end
-            case plug.fish
-                if test (type -q plug) $status -ne 0
-                    curl -sL https://raw.githubusercontent.com/kidonng/plug.fish/v2/functions/plug.fish | source
-                    PLUG_GIT='--depth 1 -q --branch v2' plug install kidonng/plug.fish
-                    printf "%s\n" \
-                        "if set --query plug_path" \
-                        "    source \$plug_path/kidonng/plug.fish/functions/plug.fish" \
-                        "    plug init" \
-                        "end" >> ~/.config/fish/config.fish
-                else
-                    echo "Plugin manager already installed: plug.fish"
-                end
             case '*'
                 echo "Unrecognised plugin manager: '${{ inputs.plugin-manager }}'" >&2; and exit 1
         end
